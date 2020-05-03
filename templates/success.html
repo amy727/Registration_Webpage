@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="main_body">
+
+        <div class="header2">
+            <h2>Success</h2>
+        </div>
+
+        <div class="main_body">
+            <p>You are registered!</p> 
+            <p>Your id is {{id}}.</p>
+
+            <br></br>
+
+            <form action="/registrants">
+                <input type="submit" value="View Registrants">
+            </form>
+        </div>
+
+        
+
+    </div>
+
+    
+{% endblock %}

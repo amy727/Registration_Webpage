@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="main_body">
+
+        <div class="header2">
+            <h2>Registration Form</h2>
+        </div>
+
+        <div class="text">
+            <form action="/register" method="post" id="myform">
+                <br>First name:<br>
+                <input type="text" name="firstname"><br>
+                <br>Last name:<br>
+                <input type="text" name="lastname"><br>
+                <br>Gender:<br>
+                <input type="radio" name="gender" value="male"> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br>
+                <br>Address:<br>
+                <input type="text" name="address"><br><br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        function clear() {
+            document.getElementById("myform").reset();
+        }
+    </script>
+
+{% endblock %}

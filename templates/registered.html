@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="main_body">
+
+        <div class="header2">
+            <h2>Registered People</h2>
+        </div>
+
+        
+        <table>
+        <tr class="table_heading">
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+        </tr>
+        
+        {% for p in people %}
+        <tr>
+            <td>{{p['id']}}</td>
+            <td>{{p['firstname']}}</td>
+            <td>{{p['lastname']}}</td>
+            <td>{{p['gender']}}</td>
+            <td>{{p['address']}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+        <br></br>
+        <form action="/">
+            <input type="submit" value="Back to registration">
+        </form>
+
+    </div>
+
+{% endblock %}
